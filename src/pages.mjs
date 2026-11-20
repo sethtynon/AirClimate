@@ -474,7 +474,7 @@ ${header('about')}
       <div class="contact-info">
         <a class="big-phone" href="${B.phoneHref}">${icon('phone')}<span><small>Call or text</small>${B.phone}</span></a>
         <dl class="facts">
-          <div><dt>Based in</dt><dd>Stockton, CA</dd></div>
+          <div><dt>Address</dt><dd>${esc(B.address.street)}<br>${esc(B.address.city)}, ${B.address.region} ${B.address.zip} <a class="dir-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=${encodeURIComponent(B.addressLine)}" rel="noopener" target="_blank">Get directions</a></dd></div>
           <div><dt>Service area</dt><dd>Within ${B.radiusMiles} miles of Stockton — <a href="/service-areas/">see all cities</a></dd></div>
           <div><dt>License</dt><dd>${B.licenseLabel}</dd></div>
           ${B.email ? `<div><dt>Email</dt><dd><a href="mailto:${esc(B.email)}">${esc(B.email)}</a></dd></div>` : ''}
@@ -658,7 +658,7 @@ ${body('page-lp')}
 <footer class="lp-footer">
   <div class="header-stripes" aria-hidden="true"><span></span><span></span></div>
   <div class="wrap lp-footer-in">
-    <p>${esc(B.name)} — ${B.licenseLabel}</p>
+    <p>${esc(B.name)} — ${esc(B.addressLine)} — ${B.licenseLabel}</p>
     <p><a href="${B.phoneHref}">${B.phone}</a> <a href="/privacy/">Privacy</a></p>
   </div>
 </footer>

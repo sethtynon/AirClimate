@@ -275,7 +275,7 @@ export function businessSchema(cityNames = []) {
     logo: url('/assets/img/logo-navy.png'),
     image: url('/assets/img/og-image.png'),
     description: `Heating and air conditioning repair, installation and maintenance for homes and businesses in Stockton, CA and within ${B.radiusMiles} miles. California contractor license #${B.license}.`,
-    address: { '@type': 'PostalAddress', addressLocality: B.city, addressRegion: B.region, addressCountry: 'US' },
+    address: { '@type': 'PostalAddress', streetAddress: B.address.street, addressLocality: B.address.city, postalCode: B.address.zip, addressRegion: B.region, addressCountry: 'US' },
     geo: { '@type': 'GeoCoordinates', latitude: B.geo.lat, longitude: B.geo.lng },
     areaServed: [
       { '@type': 'GeoCircle', geoMidpoint: { '@type': 'GeoCoordinates', latitude: B.geo.lat, longitude: B.geo.lng }, geoRadius: String(Math.round(B.radiusMiles * 1609.34)) },
@@ -300,6 +300,7 @@ export function footer(cities = [], { quoteTab = true } = {}) {
       <a href="/" aria-label="${esc(B.name)} home"><img src="/assets/img/logo-navy.png" alt="${esc(B.name)}" width="680" height="226" loading="lazy"></a>
       <p>Heating, cooling and indoor air for homes, businesses and builders in Stockton and ${B.radiusMiles} miles around.</p>
       <a class="footer-phone" href="${B.phoneHref}">${icon('phone', 'ico ico-sm')}${B.phone}</a>
+      <address class="footer-addr">${esc(B.address.street)}<br>${esc(B.address.city)}, ${B.address.region} ${B.address.zip}</address>
       ${socials.length ? `<ul class="footer-social">${socials.map(([k, v]) => `<li><a href="${esc(v)}" rel="noopener">${esc(k)}</a></li>`).join('')}</ul>` : ''}
     </div>
     <div class="footer-cols">

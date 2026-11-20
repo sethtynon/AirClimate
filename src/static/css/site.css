@@ -463,6 +463,11 @@ p { margin: 0 0 1em; }
 .footer-phone { display: inline-flex; align-items: center; gap: 8px; font-family: var(--f-display); font-weight: 800; font-size: 1.4rem; text-decoration: none; }
 .footer-phone:hover { color: var(--brick); }
 .footer-phone:active { opacity: .7; }
+.footer-addr { font-style: normal; margin-top: var(--s2); line-height: 1.5; }
+.dir-link { display: block; margin-top: 4px; font-family: var(--f-body); font-weight: 600; font-size: .9rem; color: var(--brick); }
+.dir-link:hover { color: var(--navy); }
+.dir-link:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
+.dir-link:active { opacity: .7; }
 .footer-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s5); }
 .footer-h { font-family: var(--f-display); font-weight: 800; font-size: 1.05rem; margin-bottom: var(--s3); }
 .footer-cols ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 15px; }
