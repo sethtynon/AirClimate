@@ -1,0 +1,35 @@
+// Simple stroke icons (24x24), inherit currentColor.
+const p = {
+  snow: '<path d="M12 2v20M4.9 6l14.2 12M19.1 6 4.9 18"/><path d="m9 4 3 2 3-2M9 20l3-2 3 2"/>',
+  unit: '<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="4"/><path d="M12 8v8M8 12h8"/>',
+  wrench: '<path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8V21h3.2l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/>',
+  flame: '<path d="M12 22c4 0 7-2.7 7-7 0-4-3-6.5-4-9-1.5 2-2 3.5-2 5-1.5-1-3-3-3-6-3 3-5 6.5-5 10 0 4.3 3 7 7 7z"/>',
+  cycle: '<path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/>',
+  split: '<rect x="2" y="5" width="20" height="8" rx="2"/><path d="M6 10h12M7 17l-1 3M12 17v3M17 17l1 3"/>',
+  duct: '<path d="M3 7h10a4 4 0 0 1 4 4v10M3 13h6a2 2 0 0 1 2 2v6"/><path d="M3 7v6M11 21h6"/>',
+  leaf: '<path d="M5 19c0-9 6-14 15-14 0 9-5 15-14 15"/><path d="M5 19 13 11"/>',
+  dial: '<circle cx="12" cy="12" r="9"/><path d="M12 12l4-3"/><path d="M12 5v1M19 12h-1M6 12H5"/>',
+  zones: '<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 3v18M3 12h9"/>',
+  fan: '<circle cx="12" cy="12" r="2"/><path d="M12 10c0-4 1-7 4-7 2 0 3 2 2 4l-4 4M14 12c4 0 7 1 7 4 0 2-2 3-4 2l-4-4M12 14c0 4-1 7-4 7-2 0-3-2-2-4l4-4M10 12c-4 0-7-1-7-4 0-2 2-3 4-2l4 4"/>',
+  bolt: '<path d="M13 2 4 14h7l-1 8 9-12h-7z"/>',
+  building: '<rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2M10 21v-3h4v3"/>',
+  house: '<path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10M10 20v-5h4v5"/>',
+  hammer: '<path d="m14 7 3-3 3 3-3 3"/><path d="M17 10 7 20l-3-3L14 7"/>',
+  phone: '<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/>',
+  check: '<path d="M4 12.5 9 17.5 20 6.5"/>',
+  pin: '<path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/>',
+  shield: '<path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/>',
+  menu: '<path d="M3 6h18M3 12h18M3 18h18"/>',
+  close: '<path d="M6 6l12 12M18 6 6 18"/>',
+  chevron: '<path d="m6 9 6 6 6-6"/>',
+  star: '<path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/>',
+  calendar: '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+  tag: '<path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/>',
+  clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+  back: '<path d="M19 12H5M11 6l-6 6 6 6"/>',
+  quote: '<path d="M10 7H6a2 2 0 0 0-2 2v4h6V7zM20 7h-4a2 2 0 0 0-2 2v4h6V7zM4 13c0 3 1 4 3 5M14 13c0 3 1 4 3 5"/>',
+  arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
+};
+
+export const icon = (name, cls = 'ico') =>
+  `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p[name] || ''}</svg>`;
