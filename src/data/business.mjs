@@ -2,6 +2,7 @@
 export const business = {
   name: 'Air Climate Heating & Cooling',
   shortName: 'Air Climate',
+  gbpName: 'Air Climate Heating & Cooling of Stockton', // exact Google Business Profile name
   phone: '(209) 642-9021',
   phoneHref: 'tel:+12096429021',
   phoneE164: '+12096429021',
@@ -31,7 +32,7 @@ export const business = {
   social: { facebook: '', instagram: '', google: '', yelp: '' }, // fill in when profiles exist
   // Google map shown in the service-area section. Once your Google Business Profile is live,
   // change this to your business name (e.g. 'Air Climate Heating & Cooling, Stockton, CA') so the map shows your listing + reviews.
-  mapQuery: '5922 Mitchler Ave, Stockton, CA 95207',
+  mapQuery: 'Air Climate Heating & Cooling of Stockton, 5922 Mitchler Ave, Stockton, CA 95207',
   // Real customer reviews (copy from Google). The reviews section stays hidden until at least one is added.
   // Example: { name: 'Maria G.', city: 'Lodi', text: 'Came out the same day…' }
   reviews: [],
