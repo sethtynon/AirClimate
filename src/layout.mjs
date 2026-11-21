@@ -290,6 +290,7 @@ export function businessSchema(cityNames = []) {
     '@type': 'HVACBusiness',
     '@id': url('/#business'),
     name: B.name,
+    alternateName: B.gbpName,
     url: url('/'),
     telephone: B.phoneE164,
     logo: url('/assets/img/logo-navy.png'),
