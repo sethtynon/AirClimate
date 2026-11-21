@@ -19,6 +19,8 @@ export const business = {
   // Only set this if you later want leads POSTed somewhere else instead (e.g. a CRM webhook).
   formEndpoint: '',
   // Ad tracking. Paste IDs here to turn them on; the thank-you page fires a 'Lead' conversion.
+  // Google Search Console verification token (meta-tag method).
+  googleSiteVerification: 'lgkr-zFoT11WqOLXIAlhwr9MxIyrtaEsH5MR2kERFNc',
   tracking: {
     metaPixelId: '', // Facebook / Meta Pixel ID (numbers only)
     ga4Id: '', // Google Analytics 4, e.g. 'G-XXXXXXX'

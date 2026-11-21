@@ -32,6 +32,7 @@ ${noindex ? '<meta name="robots" content="noindex, nofollow">' : `<link rel="can
 <meta property="og:image" content="${url('/assets/img/og-image.png')}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#10253A">
+${B.googleSiteVerification ? `<meta name="google-site-verification" content="${esc(B.googleSiteVerification)}">` : ''}
 <link rel="icon" href="/assets/img/badge-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/assets/img/badge-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
