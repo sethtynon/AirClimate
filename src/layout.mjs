@@ -297,6 +297,7 @@ export function businessSchema(cityNames = []) {
     image: url('/assets/img/og-image.png'),
     description: `Heating and air conditioning repair, installation and maintenance for homes and businesses in Stockton, CA and within ${B.radiusMiles} miles. California contractor license #${B.license}.`,
     address: { '@type': 'PostalAddress', streetAddress: B.address.street, addressLocality: B.address.city, postalCode: B.address.zip, addressRegion: B.region, addressCountry: 'US' },
+    openingHoursSpecification: B.hours.filter((h) => !h.closed).map((h) => ({ '@type': 'OpeningHoursSpecification', dayOfWeek: h.days, opens: h.opens, closes: h.closes })),
     geo: { '@type': 'GeoCoordinates', latitude: B.geo.lat, longitude: B.geo.lng },
     areaServed: [
       { '@type': 'GeoCircle', geoMidpoint: { '@type': 'GeoCoordinates', latitude: B.geo.lat, longitude: B.geo.lng }, geoRadius: String(Math.round(B.radiusMiles * 1609.34)) },
@@ -307,6 +308,8 @@ export function businessSchema(cityNames = []) {
     sameAs: Object.values(B.social).filter(Boolean),
   };
 }
+
+export const hoursList = (cls = 'hours') => `<dl class="${cls}">${B.hours.map((h) => `<div><dt>${esc(h.label)}</dt><dd>${esc(h.text)}</dd></div>`).join('')}</dl>`;
 
 // ───────────── FOOTER ─────────────
 export function footer(cities = [], { quoteTab = true } = {}) {
@@ -322,6 +325,7 @@ export function footer(cities = [], { quoteTab = true } = {}) {
       <p>Heating, cooling and indoor air for homes, businesses and builders in Stockton and ${B.radiusMiles} miles around.</p>
       <a class="footer-phone" href="${B.phoneHref}">${icon('phone', 'ico ico-sm')}${B.phone}</a>
       <address class="footer-addr">${esc(B.address.street)}<br>${esc(B.address.city)}, ${B.address.region} ${B.address.zip}</address>
+      ${hoursList('hours footer-hours')}
       ${socials.length ? `<ul class="footer-social">${socials.map(([k, v]) => `<li><a href="${esc(v)}" rel="noopener">${esc(k)}</a></li>`).join('')}</ul>` : ''}
     </div>
     <div class="footer-cols">

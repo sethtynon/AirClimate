@@ -2,7 +2,7 @@
 import {
   head, header, footer, wave, rule, sectionHead, callBtn, bookBtn, serviceCard, ctaBand, leadForm, quiz, generalSteps,
   faqList, faqSchema, breadcrumbs, breadcrumbSchema, mapFrame, cityPills, businessSchema,
-  esc, url, svcLink, cityLink, svcPhoto, B, icon, categories, services, photo,
+  esc, url, svcLink, cityLink, svcPhoto, B, icon, categories, services, photo, hoursList,
 } from './layout.mjs';
 import { serviceBySlug } from './data/services.mjs';
 import { zoneCopy } from './data/cities.mjs';
@@ -438,6 +438,7 @@ ${header('about')}
         <p>That means repairs on every major brand, new air conditioners, furnaces and heat pumps sized to your home, ductwork and indoor air quality, light commercial rooftop units and HVAC for new construction and remodels.</p>
         <dl class="facts">
           <div><dt>Based in</dt><dd>Stockton, California</dd></div>
+          <div><dt>Hours</dt><dd>${hoursList('hours')}</dd></div>
           <div><dt>Service area</dt><dd>${B.radiusMiles} miles around Stockton</dd></div>
           <div><dt>License</dt><dd>CSLB #${B.license}</dd></div>
           <div><dt>Phone</dt><dd><a href="${B.phoneHref}">${B.phone}</a></dd></div>
@@ -475,6 +476,7 @@ ${header('about')}
         <a class="big-phone" href="${B.phoneHref}">${icon('phone')}<span><small>Call or text</small>${B.phone}</span></a>
         <dl class="facts">
           <div><dt>Address</dt><dd>${esc(B.address.street)}<br>${esc(B.address.city)}, ${B.address.region} ${B.address.zip} <a class="dir-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=${encodeURIComponent(B.addressLine)}" rel="noopener" target="_blank">Get directions</a></dd></div>
+          <div><dt>Hours</dt><dd>${hoursList('hours')}</dd></div>
           <div><dt>Service area</dt><dd>Within ${B.radiusMiles} miles of Stockton — <a href="/service-areas/">see all cities</a></dd></div>
           <div><dt>License</dt><dd>${B.licenseLabel}</dd></div>
           ${B.email ? `<div><dt>Email</dt><dd><a href="mailto:${esc(B.email)}">${esc(B.email)}</a></dd></div>` : ''}
