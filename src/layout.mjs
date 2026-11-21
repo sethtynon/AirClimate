@@ -136,7 +136,7 @@ export function serviceCard(s, { label } = {}) {
 }
 
 // ───────────── CTA BAND ("Need help?") ─────────────
-export function ctaBand({ h = 'Honest comfort for your heating & air', p = `Call, text or book online. We’ll confirm a time that works for you — anywhere within ${B.radiusMiles} miles of Stockton.`, from = 'cream' } = {}) {
+export function ctaBand({ h = 'Honest comfort for your heating & air', p = `Call, text or book online. We’ll confirm a time that works for you — anywhere in the Stockton area.`, from = 'cream' } = {}) {
   return `${wave(from, 'navy')}
 <section class="cta-band">
   <div class="wrap cta-in">
@@ -295,7 +295,7 @@ export function businessSchema(cityNames = []) {
     telephone: B.phoneE164,
     logo: url('/assets/img/logo-navy.png'),
     image: url('/assets/img/og-image.png'),
-    description: `Heating and air conditioning repair, installation and maintenance for homes and businesses in Stockton, CA and within ${B.radiusMiles} miles. California contractor license #${B.license}.`,
+    description: `Heating and air conditioning repair, installation and maintenance for homes and businesses in Stockton, CA and surrounding cities. California contractor license #${B.license}.`,
     address: { '@type': 'PostalAddress', streetAddress: B.address.street, addressLocality: B.address.city, postalCode: B.address.zip, addressRegion: B.region, addressCountry: 'US' },
     openingHoursSpecification: B.hours.filter((h) => !h.closed).map((h) => ({ '@type': 'OpeningHoursSpecification', dayOfWeek: h.days, opens: h.opens, closes: h.closes })),
     geo: { '@type': 'GeoCoordinates', latitude: B.geo.lat, longitude: B.geo.lng },
@@ -322,7 +322,7 @@ export function footer(cities = [], { quoteTab = true } = {}) {
   <div class="wrap footer-top">
     <div class="footer-brand">
       <a href="/" aria-label="${esc(B.name)} home"><img src="/assets/img/logo-navy.png" alt="${esc(B.name)}" width="680" height="226" loading="lazy"></a>
-      <p>Heating, cooling and indoor air for homes, businesses and builders in Stockton and ${B.radiusMiles} miles around.</p>
+      <p>Heating, cooling and indoor air for homes, businesses and builders in Stockton and the surrounding area.</p>
       <a class="footer-phone" href="${B.phoneHref}">${icon('phone', 'ico ico-sm')}${B.phone}</a>
       <address class="footer-addr">${esc(B.address.street)}<br>${esc(B.address.city)}, ${B.address.region} ${B.address.zip}</address>
       ${hoursList('hours footer-hours')}

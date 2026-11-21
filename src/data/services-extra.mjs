@@ -8,7 +8,7 @@ export const extraServices = [
     name: 'AC replacement',
     h1: 'Air conditioner replacement in Stockton',
     metaTitle: 'AC Replacement Stockton CA | Air Climate Heating & Cooling',
-    metaDesc: 'Replace an old, failing or R-22 air conditioner with a right-sized, efficient system. Free replacement estimates in Stockton and within 40 miles.',
+    metaDesc: 'Replace an old, failing or R-22 air conditioner with a right-sized, efficient system. Free replacement estimates in Stockton and nearby cities.',
     lead: 'When the repair bills start stacking up, a replacement can cost less over the next five years than keeping the old unit alive. We’ll show you both numbers side by side.',
     signsTitle: 'Replacement usually makes sense when',
     signs: [
@@ -110,7 +110,7 @@ export const extraServices = [
     name: 'Heating repair',
     h1: 'Heating repair in Stockton',
     metaTitle: 'Heating Repair Stockton CA | Heater Repair | Air Climate',
-    metaDesc: 'Heater not working? Repairs for gas furnaces, heat pumps, wall heaters and package units in Stockton and within 40 miles. Upfront pricing.',
+    metaDesc: 'Heater not working? Repairs for gas furnaces, heat pumps, wall heaters and package units in Stockton and nearby cities. Upfront pricing.',
     lead: 'Whether it’s a gas furnace in the hall closet, a heat pump in the side yard or a package unit on the roof, we’ll find out why it’s not heating and give you the price before we fix it.',
     signsTitle: 'Call for heating repair if',
     signs: [
@@ -143,7 +143,7 @@ export const extraServices = [
     name: 'Heating installation',
     h1: 'Heating system installation',
     metaTitle: 'Heating Installation Stockton CA | Furnace & Heat Pump | Air Climate',
-    metaDesc: 'Choosing a new heating system? Gas furnaces, heat pumps and dual-fuel systems installed in Stockton and within 40 miles. Free estimates.',
+    metaDesc: 'Choosing a new heating system? Gas furnaces, heat pumps and dual-fuel systems installed in Stockton and nearby cities. Free estimates.',
     lead: 'Gas furnace, heat pump or both? The right answer depends on your home, your gas and electric rates and whether you have solar. We’ll lay out the options and what each costs to run.',
     signsTitle: 'Questions we’ll help you answer',
     signs: [
@@ -175,7 +175,7 @@ export const extraServices = [
     name: 'Furnace replacement',
     h1: 'Furnace replacement in Stockton',
     metaTitle: 'Furnace Replacement Stockton CA | Air Climate Heating & Cooling',
-    metaDesc: 'Replace an old or unsafe gas furnace with a quiet, efficient model sized to your home. Free estimates in Stockton and within 40 miles.',
+    metaDesc: 'Replace an old or unsafe gas furnace with a quiet, efficient model sized to your home. Free estimates in Stockton and nearby cities.',
     lead: 'A cracked heat exchanger, a furnace older than 20 years or repairs every winter — those are the signs it’s time. We’ll replace it cleanly and safely, usually in a day.',
     signsTitle: 'It may be time to replace your furnace if',
     signs: [
@@ -208,7 +208,7 @@ export const extraServices = [
     name: 'Furnace tune-up',
     h1: 'Furnace tune-ups in Stockton',
     metaTitle: 'Furnace Tune-Up Stockton CA | Fall Heating Service | Air Climate',
-    metaDesc: 'Fall furnace tune-ups with a full safety and carbon monoxide check. Serving Stockton, Lodi, Manteca, Tracy and within 40 miles.',
+    metaDesc: 'Fall furnace tune-ups with a full safety and carbon monoxide check. Serving Stockton, Lodi, Manteca, Tracy and nearby.',
     lead: 'A furnace that sat all summer deserves a check before the first cold, foggy morning. We clean, test and safety-check it so it starts reliably all winter.',
     signsTitle: 'Schedule a furnace tune-up if',
     signs: [
@@ -243,7 +243,7 @@ export const extraServices = [
     name: 'Heat pump repair',
     h1: 'Heat pump repair in Stockton',
     metaTitle: 'Heat Pump Repair Stockton CA | Air Climate Heating & Cooling',
-    metaDesc: 'Heat pump not heating or cooling? Repair for all brands of ducted and ductless heat pumps in Stockton and within 40 miles.',
+    metaDesc: 'Heat pump not heating or cooling? Repair for all brands of ducted and ductless heat pumps in Stockton and nearby cities.',
     lead: 'Heat pumps work year-round, so they wear differently from an AC or furnace. We know the reversing valves, defrost boards and controls that fail — and how to fix them.',
     signsTitle: 'Signs your heat pump needs repair',
     signs: [
@@ -275,7 +275,7 @@ export const extraServices = [
     name: 'Heat pump installation',
     h1: 'Heat pump installation in Stockton',
     metaTitle: 'Heat Pump Installation Stockton CA | Free Estimates | Air Climate',
-    metaDesc: 'Switch to efficient all-electric heating and cooling. Ducted and ductless heat pump installation in Stockton and within 40 miles. Rebate help included.',
+    metaDesc: 'Switch to efficient all-electric heating and cooling. Ducted and ductless heat pump installation in Stockton and nearby cities. Rebate help included.',
     lead: 'A heat pump replaces both your AC and furnace with one efficient system. In the Valley’s mild winters, it’s one of the smartest upgrades you can make — especially with solar.',
     signsTitle: 'A heat pump is a strong choice if',
     signs: [
@@ -309,7 +309,7 @@ export const extraServices = [
     name: 'Heat pump replacement',
     h1: 'Heat pump replacement',
     metaTitle: 'Heat Pump Replacement Stockton CA | Air Climate Heating & Cooling',
-    metaDesc: 'Replace an aging heat pump with a quieter, more efficient model. Free replacement estimates in Stockton and within 40 miles.',
+    metaDesc: 'Replace an aging heat pump with a quieter, more efficient model. Free replacement estimates in Stockton and nearby cities.',
     lead: 'Today’s heat pumps are dramatically quieter and more efficient than models from 10–15 years ago. If yours is struggling, a replacement can cut your bills and the noise.',
     signsTitle: 'Consider replacing your heat pump if',
     signs: [
@@ -340,7 +340,7 @@ export const extraServices = [
     name: 'Heat pump maintenance',
     h1: 'Heat pump maintenance and tune-ups',
     metaTitle: 'Heat Pump Maintenance & Tune-Up Stockton CA | Air Climate',
-    metaDesc: 'Twice-yearly heat pump tune-ups keep heating and cooling efficient. Serving Stockton, Lodi, Manteca, Tracy and within 40 miles.',
+    metaDesc: 'Twice-yearly heat pump tune-ups keep heating and cooling efficient. Serving Stockton, Lodi, Manteca, Tracy and nearby.',
     lead: 'A heat pump works in summer and winter, so it needs attention twice a year. A quick tune-up each season keeps it efficient and catches problems early.',
     signsTitle: 'Your heat pump is due if',
     signs: [
@@ -372,7 +372,7 @@ export const extraServices = [
     name: 'Mini-split repair',
     h1: 'Ductless mini-split repair',
     metaTitle: 'Mini-Split Repair Stockton CA | Ductless AC Repair | Air Climate',
-    metaDesc: 'Ductless mini-split repair for Mitsubishi, Daikin, Fujitsu, LG and more. Serving Stockton and within 40 miles. Upfront pricing.',
+    metaDesc: 'Ductless mini-split repair for Mitsubishi, Daikin, Fujitsu, LG and more. Serving Stockton and nearby cities. Upfront pricing.',
     lead: 'Blinking lights, error codes, water dripping from the indoor head — mini-splits have their own quirks. We troubleshoot them all and give you the price before we start.',
     signsTitle: 'Signs your mini-split needs repair',
     signs: [
@@ -404,7 +404,7 @@ export const extraServices = [
     name: 'Mini-split installation',
     h1: 'Ductless mini-split installation',
     metaTitle: 'Mini-Split Installation Stockton CA | Ductless AC & Heat | Air Climate',
-    metaDesc: 'Single-zone and multi-zone ductless mini-split installation for additions, garages, ADUs and hot rooms. Free estimates in Stockton and within 40 miles.',
+    metaDesc: 'Single-zone and multi-zone ductless mini-split installation for additions, garages, ADUs and hot rooms. Free estimates in Stockton and nearby cities.',
     lead: 'A mini-split heats and cools a room without any ductwork. One outdoor unit can run up to several indoor heads, each with its own temperature.',
     signsTitle: 'Popular mini-split projects',
     signs: [
@@ -438,7 +438,7 @@ export const extraServices = [
     name: 'Mini-split maintenance',
     h1: 'Ductless mini-split maintenance',
     metaTitle: 'Mini-Split Cleaning & Maintenance Stockton CA | Air Climate',
-    metaDesc: 'Deep cleaning and maintenance for ductless mini-splits — indoor heads, blower wheels, coils and drains. Serving Stockton and within 40 miles.',
+    metaDesc: 'Deep cleaning and maintenance for ductless mini-splits — indoor heads, blower wheels, coils and drains. Serving Stockton and nearby cities.',
     lead: 'Mini-split indoor heads collect dust and moisture right in the room. Regular cleaning keeps the air fresh, the drain clear and the system efficient.',
     signsTitle: 'Your mini-split needs cleaning if',
     signs: [
@@ -470,7 +470,7 @@ export const extraServices = [
     name: 'Duct repair',
     h1: 'Air duct repair',
     metaTitle: 'Duct Repair Stockton CA | Air Climate Heating & Cooling',
-    metaDesc: 'Crushed, disconnected or leaking ducts waste the air you pay for. Duct repair in Stockton and within 40 miles.',
+    metaDesc: 'Crushed, disconnected or leaking ducts waste the air you pay for. Duct repair in Stockton and nearby cities.',
     lead: 'A single disconnected duct in the attic can dump a room’s worth of cooled air into 140° heat. Finding and fixing it is one of the best-value repairs in HVAC.',
     signsTitle: 'You may have a duct problem if',
     signs: [
@@ -501,7 +501,7 @@ export const extraServices = [
     name: 'Duct replacement',
     h1: 'Ductwork replacement',
     metaTitle: 'Duct Replacement Stockton CA | New Ductwork | Air Climate',
-    metaDesc: 'Replace old, leaky or undersized ductwork with a properly designed, sealed system. Serving Stockton and within 40 miles.',
+    metaDesc: 'Replace old, leaky or undersized ductwork with a properly designed, sealed system. Serving Stockton and nearby cities.',
     lead: 'Many Valley homes still run on the ductwork installed when they were built. Brittle, leaky ducts can waste a big share of what your system produces.',
     signsTitle: 'Consider new ductwork if',
     signs: [
@@ -533,7 +533,7 @@ export const extraServices = [
     name: 'Duct sealing',
     h1: 'Duct sealing',
     metaTitle: 'Duct Sealing Stockton CA | Air Climate Heating & Cooling',
-    metaDesc: 'Seal leaky ducts to stop paying to cool your attic. Duct sealing for homes in Stockton and within 40 miles.',
+    metaDesc: 'Seal leaky ducts to stop paying to cool your attic. Duct sealing for homes in Stockton and nearby cities.',
     lead: 'Leaky supply ducts blow conditioned air into the attic. Leaky return ducts pull attic dust into your home. Sealing fixes both.',
     signsTitle: 'Duct sealing helps if',
     signs: [
@@ -562,7 +562,7 @@ export const extraServices = [
     name: 'Air purifiers & filtration',
     h1: 'Whole-home air purifiers and filtration',
     metaTitle: 'Air Purifiers & Filtration Stockton CA | Air Climate',
-    metaDesc: 'Whole-home air filtration and purification for Valley dust, pollen and wildfire smoke. Installed in Stockton and within 40 miles.',
+    metaDesc: 'Whole-home air filtration and purification for Valley dust, pollen and wildfire smoke. Installed in Stockton and nearby cities.',
     lead: 'Between farm dust, spring pollen and wildfire smoke, Valley air needs help. Whole-home filtration cleans the air in every room every time your system runs.',
     signsTitle: 'Upgrade your filtration if',
     signs: [
@@ -595,7 +595,7 @@ export const extraServices = [
     name: 'Commercial HVAC maintenance',
     h1: 'Commercial HVAC maintenance',
     metaTitle: 'Commercial HVAC Maintenance Stockton CA | Rooftop Units | Air Climate',
-    metaDesc: 'Scheduled maintenance for rooftop units and split systems in offices, retail and restaurants. Stockton and within 40 miles.',
+    metaDesc: 'Scheduled maintenance for rooftop units and split systems in offices, retail and restaurants. Stockton and nearby cities.',
     lead: 'A rooftop unit that fails on a Saturday in August costs more than the repair — it costs customers. Scheduled maintenance keeps your space open and comfortable.',
     signsTitle: 'Good fit for',
     signs: [

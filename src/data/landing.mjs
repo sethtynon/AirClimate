@@ -54,7 +54,7 @@ export const landingPages = [
   {
     slug: 'ac-repair',
     h1: 'AC not cooling? We’ll get it running again.',
-    sub: 'Honest air conditioning repair across Stockton and 40 miles out. You see the price before we start.',
+    sub: 'Honest air conditioning repair across Stockton and nearby cities. You see the price before we start.',
     interest: 'AC repair',
     quizTitle: 'Get your AC fixed',
     steps: [
@@ -75,7 +75,7 @@ export const landingPages = [
   {
     slug: 'new-ac-system',
     h1: 'Get a free estimate on a new AC or heat pump.',
-    sub: 'Sized for your home, installed clean, permit handled. Serving Stockton and 40 miles around.',
+    sub: 'Sized for your home, installed clean, permit handled. Serving Stockton and nearby cities.',
     interest: 'New system estimate',
     quizTitle: 'Start your free estimate',
     steps: [
@@ -159,7 +159,7 @@ export const landingPages = [
   {
     slug: 'hvac-service',
     h1: 'Heating and air service you can count on.',
-    sub: 'Repair, replacement and maintenance for homes and businesses across Stockton and 40 miles out.',
+    sub: 'Repair, replacement and maintenance for homes and businesses across Stockton and nearby cities.',
     interest: 'General HVAC service',
     quizTitle: 'Tell us what you need',
     steps: [
@@ -171,7 +171,7 @@ export const landingPages = [
     ],
     points: ['Residential, commercial and new construction', 'All major brands serviced', 'Upfront pricing', 'CA Lic. #901237'],
     faqs: [
-      { q: 'What areas do you serve?', a: 'Stockton and everywhere within about 40 miles — Lodi, Manteca, Tracy, Modesto, Galt, Brentwood and more.' },
+      { q: 'What areas do you serve?', a: 'Stockton and the surrounding area — Lodi, Manteca, Tracy, Modesto, Galt, Brentwood and more.' },
     ],
   },
   {

@@ -92,7 +92,7 @@
   });
 
   // ── Quiz funnels: one question at a time, auto-advance on tap ──
-  var inArea = /^(952|953|945|956|957)/; // rough check for the 40-mile area; never blocks a lead
+  var inArea = /^(952|953|945|956|957)/; // rough check for the service area; never blocks a lead
   document.querySelectorAll('[data-quiz]').forEach(function (form) {
     prep(form);
     var steps = Array.prototype.slice.call(form.querySelectorAll('.qz-step'));
@@ -126,7 +126,7 @@
     function zipNext() {
       if (!checkField(zip)) { err.textContent = 'Please enter a 5-digit ZIP code.'; err.hidden = false; zip.focus(); return; }
       if (!inArea.test(zip.value) && zipNote.hidden) {
-        zipNote.textContent = 'That ZIP may be outside our 40-mile area. Tap Continue and we’ll let you know either way.';
+        zipNote.textContent = 'That ZIP may be outside our usual service area. Tap Continue and we’ll let you know either way.';
         zipNote.hidden = false; return;
       }
       show(i + 1, true);

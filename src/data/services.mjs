@@ -19,7 +19,7 @@ export const services = [
     name: 'AC repair',
     h1: 'Air conditioning repair in Stockton',
     metaTitle: 'AC Repair Stockton CA | Air Climate Heating & Cooling',
-    metaDesc: 'Fast, honest air conditioning repair in Stockton and within 40 miles. All makes and models. Upfront pricing before work starts. Call (209) 642-9021.',
+    metaDesc: 'Fast, honest air conditioning repair in Stockton and nearby cities. All makes and models. Upfront pricing before work starts. Call (209) 642-9021.',
     lead: 'When it’s 105° in the Valley, a broken AC isn’t an inconvenience — it’s an emergency. We diagnose the actual problem, show you the price before we touch anything, and fix it right the first time.',
     signsTitle: 'Signs your AC needs repair',
     signs: [
@@ -57,7 +57,7 @@ export const services = [
     name: 'AC installation',
     h1: 'AC installation and replacement in Stockton',
     metaTitle: 'AC Installation & Replacement Stockton CA | Air Climate',
-    metaDesc: 'New central air conditioners sized correctly for your home. Free in-home estimates, clean installs and permits handled. Serving Stockton + 40 miles.',
+    metaDesc: 'New central air conditioners sized correctly for your home. Free in-home estimates, clean installs and permits handled. Serving Stockton and nearby cities.',
     lead: 'A new air conditioner is a 15-year decision. We size it to your actual home, install it to manufacturer spec, pull the permit, and leave the job site cleaner than we found it.',
     signsTitle: 'It may be time to replace your AC if',
     signs: [
@@ -94,7 +94,7 @@ export const services = [
     name: 'AC maintenance',
     h1: 'AC tune-ups and maintenance',
     metaTitle: 'AC Tune-Up & Maintenance Stockton CA | Air Climate',
-    metaDesc: 'Spring AC tune-ups that catch problems before the first heat wave. Coil cleaning, electrical checks and refrigerant testing. Stockton + 40 miles.',
+    metaDesc: 'Spring AC tune-ups that catch problems before the first heat wave. Coil cleaning, electrical checks and refrigerant testing. Stockton and nearby cities.',
     lead: 'Most summer breakdowns start as a weak capacitor or a dirty coil that nobody looked at in April. A tune-up costs a fraction of an emergency call and keeps your system running efficiently all season.',
     signsTitle: 'Book a tune-up if',
     signs: [
@@ -200,7 +200,7 @@ export const services = [
     name: 'Heating maintenance',
     h1: 'Furnace tune-ups and heating maintenance',
     metaTitle: 'Furnace Tune-Up Stockton CA | Heating Maintenance | Air Climate',
-    metaDesc: 'Fall furnace tune-ups with safety and carbon monoxide checks. Catch problems before the first cold snap. Serving Stockton + 40 miles.',
+    metaDesc: 'Fall furnace tune-ups with safety and carbon monoxide checks. Catch problems before the first cold snap. Serving Stockton and nearby cities.',
     lead: 'A furnace that sat all summer needs a once-over before it runs every night. A fall tune-up checks the safety controls, cleans what needs cleaning and makes sure it lights reliably.',
     signsTitle: 'Book a heating tune-up if',
     signs: [
@@ -267,7 +267,7 @@ export const services = [
     name: 'Ductless mini-split services',
     h1: 'Ductless mini-split installation and repair',
     metaTitle: 'Ductless Mini-Split Installation Stockton CA | Air Climate',
-    metaDesc: 'Ductless mini-split systems for additions, garages, shops and hard-to-cool rooms. Installation and repair across Stockton and 40 miles out.',
+    metaDesc: 'Ductless mini-split systems for additions, garages, shops and hard-to-cool rooms. Installation and repair across Stockton and nearby cities.',
     lead: 'Mini-splits heat and cool individual rooms without ductwork. They’re the clean answer for additions, converted garages, ADUs, shops and that one bedroom that’s never comfortable.',
     signsTitle: 'Great for',
     signs: [
@@ -365,7 +365,7 @@ export const services = [
     name: 'Indoor air quality',
     h1: 'Indoor air quality solutions',
     metaTitle: 'Indoor Air Quality Stockton CA | Air Purifiers & Filtration',
-    metaDesc: 'Whole-home air filtration, purifiers, UV lights and humidity control for Valley dust, pollen and wildfire smoke. Serving Stockton + 40 miles.',
+    metaDesc: 'Whole-home air filtration, purifiers, UV lights and humidity control for Valley dust, pollen and wildfire smoke. Serving Stockton and nearby cities.',
     lead: 'Between ag dust, pollen season and wildfire smoke, Valley air can be rough. Whole-home air quality equipment works with your HVAC system to clean the air in every room.',
     signsTitle: 'Your home may benefit if',
     signs: [
@@ -489,7 +489,7 @@ export const services = [
     name: 'Urgent HVAC service',
     h1: 'Urgent heating and AC service',
     metaTitle: 'Emergency HVAC Repair Stockton CA | Air Climate',
-    metaDesc: 'No heat or no AC? Call Air Climate at (209) 642-9021. We prioritize urgent calls for families, seniors and businesses across Stockton + 40 miles.',
+    metaDesc: 'No heat or no AC? Call Air Climate at (209) 642-9021. We prioritize urgent calls for families, seniors and businesses across Stockton and nearby cities.',
     lead: 'No AC in a heat wave or no heat on a freezing morning — that’s urgent. Call us and we’ll get you on the schedule as fast as we can, with priority for seniors, infants and medical needs.',
     signsTitle: 'Call right away if',
     signs: [

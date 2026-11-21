@@ -15,7 +15,7 @@ Deploy on Netlify, Cloudflare Pages or Vercel — Build command: `node build.mjs
 
 - Home, About, Contact (step-by-step booking questionnaire), Comfort Plan, FAQs, Privacy
 - 37 service pages + 6 category pages (Cooling, Heating, Heat Pumps, Ductless, Air Quality & Ducts, Commercial)
-- 35 city pages — every city within 40 miles of Stockton (Bay Area cities like Livermore/Pleasanton removed)
+- 35 city pages — Stockton and surrounding cities (list filtered by `radiusMiles`, which is no longer shown on the site) (Bay Area cities like Livermore/Pleasanton removed)
 - 7 hidden ad landing pages with quiz funnels
 
 ## Where things live

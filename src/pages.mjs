@@ -34,7 +34,7 @@ function subhero({ crumbs, h1, lead, img, eyebrow = '', actions = true, extra = 
 const whyItems = [
   { h: 'Priced before we start', p: 'You approve the price after diagnosis — before any work.', img: 'techHands' },
   { h: `Licensed, ${B.licenseLabel}`, p: 'Permits pulled on every install that needs one.', img: 'techAc' },
-  { h: 'Local to Stockton', p: `Home base is right here. We work within ${B.radiusMiles} miles.`, img: 'house' },
+  { h: 'Local to Stockton', p: `Home base is right here, close to the neighborhoods we serve.`, img: 'house' },
   { h: 'Clean, careful installs', p: 'Drop cloths down, old equipment hauled away.', img: 'condenser' },
 ];
 function whyTiles() {
@@ -78,7 +78,7 @@ function reviewsBlock() {
 function areasSection(cities, { from = 'paper', limit = 16 } = {}) {
   return `<section class="section section-${from} areas">
     <div class="wrap">
-      ${sectionHead({ eyebrow: 'Areas we service', h: `Proudly serving Stockton & ${B.radiusMiles} miles around`, p: `From Galt and Elk Grove to Patterson, and from Brentwood out to the Calaveras foothills — if you’re within ${B.radiusMiles} miles of Stockton, we’ll be there.`, cls: 'center' })}
+      ${sectionHead({ eyebrow: 'Areas we service', h: `Proudly serving Stockton & the surrounding area`, p: `From Galt and Elk Grove to Patterson, and from Brentwood out to the Calaveras foothills — if you’re in our area, we’ll be there.`, cls: 'center' })}
       <div class="areas-grid">
         ${mapFrame()}
         <div>
@@ -91,7 +91,7 @@ function areasSection(cities, { from = 'paper', limit = 16 } = {}) {
 }
 
 const homeFaqs = [
-  { q: 'What areas does Air Climate serve?', a: `We’re based in Stockton and serve homes and businesses within about ${B.radiusMiles} miles — including Lodi, Manteca, Tracy, Lathrop, Modesto, Galt, Elk Grove, Brentwood and the foothills out to Jackson and San Andreas.` },
+  { q: 'What areas does Air Climate serve?', a: `We’re based in Stockton and serve homes and businesses across the area — including Lodi, Manteca, Tracy, Lathrop, Modesto, Galt, Elk Grove, Brentwood and the foothills out to Jackson and San Andreas.` },
   { q: 'Are you licensed?', a: `Yes. Air Climate Heating & Cooling is a licensed California contractor, license #${B.license}. You can verify any contractor license on the CSLB website.` },
   { q: 'Do you work on all brands?', a: 'Yes — Carrier, Trane, Lennox, Goodman, Rheem, Ruud, Bryant, American Standard, Daikin, Mitsubishi and most others.' },
   { q: 'Do you do refrigeration?', a: 'No. We’re strictly heating, ventilation and air conditioning. That focus is why we’re good at it.' },
@@ -111,7 +111,7 @@ export function homePage(cities) {
   }).join('');
   return `${head({
     title: 'Stockton HVAC | Heating & AC Repair, Installation | Air Climate',
-    description: `Air Climate Heating & Cooling: AC and furnace repair, new systems, heat pumps and ductwork for Stockton and ${B.radiusMiles} miles around. ${B.licenseLabel}. Call ${B.phone}.`,
+    description: `Air Climate Heating & Cooling: AC and furnace repair, new systems, heat pumps and ductwork for Stockton and nearby cities. ${B.licenseLabel}. Call ${B.phone}.`,
     path: '/', schema,
   })}
 ${body('page-home')}
@@ -123,12 +123,12 @@ ${header()}
         <p class="hero-chip">${icon('shield', 'ico ico-sm')}<span>Licensed California HVAC contractor <b>#${B.license}</b></span></p>
         <h1><span class="h1-small">Honest comfort for your</span> <span class="h1-big">Heating &amp; Air</span></h1>
         ${rule()}
-        <p class="hero-lead">Stockton’s heating and cooling team for homes, businesses and builders — repairs, new systems and tune-ups within ${B.radiusMiles} miles.</p>
+        <p class="hero-lead">Stockton’s heating and cooling team for homes, businesses and builders — repairs, new systems and tune-ups across the area.</p>
         <div class="btn-row">${bookBtn()}<a class="hero-call" href="${B.phoneHref}"><span class="hero-call-ico">${icon('phone')}</span><span>Call ${B.phone}</span></a></div>
       </div>
       <div class="hero-media">
         <span class="hero-photo"><img src="${photo('techAc', 1000, 1100)}" alt="Technician servicing an outdoor air conditioning unit" width="1000" height="1100"><span class="tint" aria-hidden="true"></span></span>
-        <span class="hero-sticker" aria-hidden="true"><b>${B.radiusMiles}</b><small>mile service area</small></span>
+        <span class="hero-sticker" aria-hidden="true"><b>209</b><small>Stockton local</small></span>
       </div>
     </div>
   </section>
@@ -207,13 +207,13 @@ export function servicesHub(cities) {
   const crumbs = [{ name: 'Home', path: '/' }, { name: 'Services', path: '/services/' }];
   return `${head({
     title: 'HVAC Services in Stockton CA | Heating, Cooling & Ductwork | Air Climate',
-    description: `Every heating and air conditioning service for homes and businesses in Stockton and ${B.radiusMiles} miles around: repair, replacement, heat pumps, mini-splits, ductwork, air quality and more.`,
+    description: `Every heating and air conditioning service for homes and businesses in Stockton and nearby cities: repair, replacement, heat pumps, mini-splits, ductwork, air quality and more.`,
     path: '/services/', schema: [breadcrumbSchema(crumbs)],
   })}
 ${body()}
 ${header()}
 <main id="main">
-  ${subhero({ crumbs, h1: 'Heating & air conditioning services', lead: `Repair, replacement, maintenance and new installs — for homes, businesses and new construction across Stockton and ${B.radiusMiles} miles around.`, img: photo('techAc', 1600, 700), eyebrow: 'Our services' })}
+  ${subhero({ crumbs, h1: 'Heating & air conditioning services', lead: `Repair, replacement, maintenance and new installs — for homes, businesses and new construction across Stockton and the surrounding area.`, img: photo('techAc', 1600, 700), eyebrow: 'Our services' })}
   ${categories.map((c, i) => `
   <section class="section ${i % 2 ? 'section-paper' : 'section-cream'}" id="${c.key}">
     <div class="wrap">
@@ -233,7 +233,7 @@ ${footer(cities)}`;
 
 // ═════════════ CATEGORY PAGE (/services/cooling/ etc.) ═════════════
 const catCopy = {
-  cooling: { h1: 'Air conditioning services in Stockton', title: 'AC Services Stockton CA | Repair, Install & Tune-Ups | Air Climate', lead: 'When it’s 105° in the Valley, your AC is not optional. Repair, replacement, tune-ups and whole-house fans for homes across Stockton and 40 miles out.' },
+  cooling: { h1: 'Air conditioning services in Stockton', title: 'AC Services Stockton CA | Repair, Install & Tune-Ups | Air Climate', lead: 'When it’s 105° in the Valley, your AC is not optional. Repair, replacement, tune-ups and whole-house fans for homes across Stockton and nearby cities.' },
   heating: { h1: 'Heating services in Stockton', title: 'Heating Services Stockton CA | Furnace Repair & Install | Air Climate', lead: 'Foggy Valley winters and colder foothill nights call for heat you can trust. Furnace and heater repair, replacement and tune-ups.' },
   heatpump: { h1: 'Heat pump services in Stockton', title: 'Heat Pump Services Stockton CA | Repair & Installation | Air Climate', lead: 'Efficient all-electric heating and cooling in one system. Installation, repair, replacement and maintenance for every major brand.' },
   ductless: { h1: 'Ductless mini-split services', title: 'Ductless Mini-Split Services Stockton CA | Air Climate', lead: 'Heat and cool individual rooms without ductwork — perfect for additions, garages, ADUs and the room that’s never comfortable.' },
@@ -327,14 +327,14 @@ export function areasHub(cities) {
   cities.forEach((c) => (byCounty[c.county] ||= []).push(c));
   const counties = Object.keys(byCounty);
   return `${head({
-    title: `HVAC Service Areas | Stockton + ${B.radiusMiles} Miles | Air Climate Heating & Cooling`,
-    description: `Air Climate provides heating and air conditioning service in Stockton and ${cities.length - 1} more cities within ${B.radiusMiles} miles, across ${counties.slice(0, -1).join(', ')} and ${counties.at(-1)} counties.`,
+    title: `HVAC Service Areas | Stockton & Nearby Cities | Air Climate Heating & Cooling`,
+    description: `Air Climate provides heating and air conditioning service in Stockton and ${cities.length - 1} more cities across ${counties.slice(0, -1).join(', ')} and ${counties.at(-1)} counties.`,
     path: '/service-areas/', schema: [businessSchema(cities.map((c) => c.name)), breadcrumbSchema(crumbs)],
   })}
 ${body()}
 ${header('about')}
 <main id="main">
-  ${subhero({ crumbs, h1: 'Areas we service', lead: `Based in Stockton, serving homes and businesses within ${B.radiusMiles} miles — ${cities.length} cities and towns across ${counties.length} counties.`, img: photo('house', 1600, 700), eyebrow: `Stockton + ${B.radiusMiles} miles` })}
+  ${subhero({ crumbs, h1: 'Areas we service', lead: `Based in Stockton, serving homes and businesses in ${cities.length} cities and towns across ${counties.length} counties.`, img: photo('house', 1600, 700), eyebrow: 'Service areas' })}
   <section class="section section-cream">
     <div class="wrap">
       ${mapFrame(B.mapQuery, 9)}
@@ -361,7 +361,7 @@ export function cityPage(c, cities) {
     .map((x) => ({ ...x, d: Math.hypot((x.lat - c.lat) * 69, (x.lng - c.lng) * 54.6) }))
     .sort((a, b) => a.d - b.d).slice(0, 8);
   const faqs = [
-    { q: `Do you offer HVAC service in ${c.name}?`, a: `Yes. ${c.home ? `${c.name} is our home base` : `${c.name} is about ${c.distance} miles from our Stockton base`}, well inside our ${B.radiusMiles}-mile service area. Call ${B.phone} to schedule.` },
+    { q: `Do you offer HVAC service in ${c.name}?`, a: `Yes. ${c.home ? `${c.name} is our home base` : `${c.name} is about ${c.distance} miles from our Stockton base`}, right in our service area. Call ${B.phone} to schedule.` },
     { q: `Do you install new AC and heating systems in ${c.name}?`, a: `Yes. We provide free in-home estimates for new air conditioners, furnaces, heat pumps and ductless systems in ${c.name} and handle the permit with ${c.home ? 'the city' : 'the local building department'}.` },
     { q: `What HVAC brands do you service in ${c.name}?`, a: 'All major brands, including Carrier, Trane, Lennox, Goodman, Rheem, Bryant, Daikin and Mitsubishi.' },
   ];
@@ -422,7 +422,7 @@ export function aboutPage(cities) {
   const crumbs = [{ name: 'Home', path: '/' }, { name: 'About', path: '/about/' }];
   return `${head({
     title: 'About Air Climate Heating & Cooling | Stockton HVAC Contractor',
-    description: `Air Climate Heating & Cooling is a Stockton-based HVAC contractor (${B.licenseLabel}) serving homes, businesses and builders within ${B.radiusMiles} miles.`,
+    description: `Air Climate Heating & Cooling is a Stockton-based HVAC contractor (${B.licenseLabel}) serving homes, businesses and builders across the area.`,
     path: '/about/', schema: [businessSchema([]), breadcrumbSchema(crumbs)],
   })}
 ${body()}
@@ -439,7 +439,7 @@ ${header('about')}
         <dl class="facts">
           <div><dt>Based in</dt><dd>Stockton, California</dd></div>
           <div><dt>Hours</dt><dd>${hoursList('hours')}</dd></div>
-          <div><dt>Service area</dt><dd>${B.radiusMiles} miles around Stockton</dd></div>
+          <div><dt>Service area</dt><dd>Stockton and surrounding cities</dd></div>
           <div><dt>License</dt><dd>CSLB #${B.license}</dd></div>
           <div><dt>Phone</dt><dd><a href="${B.phoneHref}">${B.phone}</a></dd></div>
         </dl>
@@ -462,7 +462,7 @@ export function contactPage(cities) {
   const crumbs = [{ name: 'Home', path: '/' }, { name: 'Contact', path: '/contact/' }];
   return `${head({
     title: 'Book HVAC Service | Contact Air Climate Heating & Cooling',
-    description: `Book heating or air conditioning service in Stockton and ${B.radiusMiles} miles around. Call ${B.phone} or book online in about 30 seconds.`,
+    description: `Book heating or air conditioning service in Stockton and nearby cities. Call ${B.phone} or book online in about 30 seconds.`,
     path: '/contact/', schema: [businessSchema([]), breadcrumbSchema(crumbs)],
   })}
 ${body()}
@@ -477,7 +477,7 @@ ${header('about')}
         <dl class="facts">
           <div><dt>Address</dt><dd>${esc(B.address.street)}<br>${esc(B.address.city)}, ${B.address.region} ${B.address.zip} <a class="dir-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=${encodeURIComponent(B.addressLine)}" rel="noopener" target="_blank">Get directions</a></dd></div>
           <div><dt>Hours</dt><dd>${hoursList('hours')}</dd></div>
-          <div><dt>Service area</dt><dd>Within ${B.radiusMiles} miles of Stockton — <a href="/service-areas/">see all cities</a></dd></div>
+          <div><dt>Service area</dt><dd>Stockton and surrounding cities — <a href="/service-areas/">see all cities</a></dd></div>
           <div><dt>License</dt><dd>${B.licenseLabel}</dd></div>
           ${B.email ? `<div><dt>Email</dt><dd><a href="mailto:${esc(B.email)}">${esc(B.email)}</a></dd></div>` : ''}
         </dl>
@@ -627,7 +627,7 @@ ${body('page-lp')}
     <span class="subhero-tint" aria-hidden="true"></span>
     <div class="wrap lp-hero-in">
       <div class="lp-copy">
-        <p class="eyebrow">Stockton + ${B.radiusMiles} miles</p>
+        <p class="eyebrow">Stockton &amp; nearby cities</p>
         <h1>${esc(lp.h1)}</h1>
         <p class="subhero-lead">${esc(lp.sub)}</p>
         <ul class="lp-points">${lp.points.map((x) => `<li>${icon('check', 'ico ico-sm')}${esc(x)}</li>`).join('')}</ul>
