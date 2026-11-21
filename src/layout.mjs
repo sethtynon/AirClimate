@@ -136,7 +136,7 @@ export function serviceCard(s, { label } = {}) {
 }
 
 // ───────────── CTA BAND ("Need help?") ─────────────
-export function ctaBand({ h = 'Honest comfort for your heating & air', p = `Call, text or book online. We’ll confirm a time that works for you — anywhere in the Stockton area.`, from = 'cream' } = {}) {
+export function ctaBand({ h = 'Need heating or air conditioning help?', p = `Call, text or book online. We’ll confirm a time that works for you — anywhere in the Stockton area.`, from = 'cream' } = {}) {
   return `${wave(from, 'navy')}
 <section class="cta-band">
   <div class="wrap cta-in">

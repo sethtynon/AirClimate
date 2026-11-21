@@ -65,7 +65,7 @@ export const landingPages = [
       ] },
       systemType, age, urgency, owner,
     ],
-    points: ['All brands of central AC repaired', 'Upfront pricing — approved by you first', 'Common parts carried on the truck', 'Licensed and insured, CA Lic. #901237'],
+    points: ['All brands of central AC repaired', 'Upfront pricing — approved by you first', 'Common parts carried on the truck', 'Licensed and insured, CA Lic. #1081315'],
     faqs: [
       { q: 'How fast can you come out?', a: 'Finish the quick questions or call, and we’ll give you the soonest available time. Urgent calls for seniors, infants and medical needs get priority.' },
       { q: 'Do you charge to diagnose?', a: 'There’s a diagnostic visit to find the actual problem. You’ll know the repair price before any work is done.' },
@@ -107,7 +107,7 @@ export const landingPages = [
       ] },
       systemType, age, urgency, owner,
     ],
-    points: ['Gas furnaces, heat pumps and wall heaters', 'Carbon monoxide and venting check on every call', 'Upfront pricing before work begins', 'CA Lic. #901237'],
+    points: ['Gas furnaces, heat pumps and wall heaters', 'Carbon monoxide and venting check on every call', 'Upfront pricing before work begins', 'CA Lic. #1081315'],
     faqs: [
       { q: 'I smell gas. What should I do?', a: 'Leave the home and call your gas utility or 911 from outside. Then call us once it’s safe.' },
       { q: 'Do you repair all brands?', a: 'Yes — Carrier, Trane, Lennox, Goodman, Rheem, Bryant and most others.' },
@@ -169,7 +169,7 @@ export const landingPages = [
       ] },
       systemType, urgency, owner,
     ],
-    points: ['Residential, commercial and new construction', 'All major brands serviced', 'Upfront pricing', 'CA Lic. #901237'],
+    points: ['Residential, commercial and new construction', 'All major brands serviced', 'Upfront pricing', 'CA Lic. #1081315'],
     faqs: [
       { q: 'What areas do you serve?', a: 'Stockton and the surrounding area — Lodi, Manteca, Tracy, Modesto, Galt, Brentwood and more.' },
     ],

@@ -120,7 +120,7 @@ ${header()}
     <div class="wrap hero-in">
       <div class="hero-copy">
         <p class="hero-chip">${icon('shield', 'ico ico-sm')}<span>Licensed California HVAC contractor <b>#${B.license}</b></span></p>
-        <h1><span class="h1-small">Honest comfort for your</span> <span class="h1-big">Heating &amp; Air</span></h1>
+        <h1><span class="h1-small">Stockton’s local</span> <span class="h1-big">Heating &amp; Air</span></h1>
         ${rule()}
         <p class="hero-lead">Heating and air conditioning repair, new systems and tune-ups for homes and businesses in Stockton, Lodi, Manteca, Tracy and nearby towns.</p>
         <div class="btn-row">${bookBtn()}<a class="hero-call" href="${B.phoneHref}"><span class="hero-call-ico">${icon('phone')}</span><span>Call ${B.phone}</span></a></div>
