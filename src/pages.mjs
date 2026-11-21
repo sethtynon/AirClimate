@@ -94,7 +94,6 @@ const homeFaqs = [
   { q: 'What areas does Air Climate serve?', a: `We’re based in Stockton and serve homes and businesses across the area — including Lodi, Manteca, Tracy, Lathrop, Modesto, Galt, Elk Grove, Brentwood and the foothills out to Jackson and San Andreas.` },
   { q: 'Are you licensed?', a: `Yes. Air Climate Heating & Cooling is a licensed California contractor, license #${B.license}. You can verify any contractor license on the CSLB website.` },
   { q: 'Do you work on all brands?', a: 'Yes — Carrier, Trane, Lennox, Goodman, Rheem, Ruud, Bryant, American Standard, Daikin, Mitsubishi and most others.' },
-  { q: 'Do you do refrigeration?', a: 'No. We’re strictly heating, ventilation and air conditioning. That focus is why we’re good at it.' },
   { q: 'Do you charge for estimates on new systems?', a: 'In-home estimates for new heating and cooling systems are free. Repair visits include a diagnostic to find the actual problem before we quote.' },
 ];
 
@@ -123,7 +122,7 @@ ${header()}
         <p class="hero-chip">${icon('shield', 'ico ico-sm')}<span>Licensed California HVAC contractor <b>#${B.license}</b></span></p>
         <h1><span class="h1-small">Honest comfort for your</span> <span class="h1-big">Heating &amp; Air</span></h1>
         ${rule()}
-        <p class="hero-lead">Stockton’s heating and cooling team for homes, businesses and builders — repairs, new systems and tune-ups across the area.</p>
+        <p class="hero-lead">Heating and air conditioning repair, new systems and tune-ups for homes and businesses in Stockton, Lodi, Manteca, Tracy and nearby towns.</p>
         <div class="btn-row">${bookBtn()}<a class="hero-call" href="${B.phoneHref}"><span class="hero-call-ico">${icon('phone')}</span><span>Call ${B.phone}</span></a></div>
       </div>
       <div class="hero-media">
@@ -136,7 +135,7 @@ ${header()}
 
   <section class="section section-navy">
     <div class="wrap">
-      ${sectionHead({ eyebrow: 'Our services', h: 'Heating & air services in Stockton, CA', p: 'Repair, replacement, maintenance and new installs. Heating, cooling and indoor air are all we do — no plumbing, no electrical, no refrigeration.', cls: 'center on-dark' })}
+      ${sectionHead({ eyebrow: 'Our services', h: 'Heating & air services in Stockton, CA', p: 'We repair, replace and maintain air conditioners, furnaces, heat pumps and ductwork, and we install complete systems in new homes and commercial buildings.', cls: 'center on-dark' })}
       <div class="svc-cards">${catCards}</div>
       <div class="btn-row center">${bookBtn('Book Now')}<a class="btn btn-outline-light" href="/services/">All ${services.length} services</a></div>
     </div>
@@ -433,8 +432,8 @@ ${header('about')}
     <div class="wrap about-split">
       <div class="about-photo"><span class="framed"><img src="${photo('techAc', 900, 1000)}" alt="Air Climate technician at work" loading="lazy" width="900" height="1000"><span class="tint" aria-hidden="true"></span></span></div>
       <div class="about-copy prose">
-        ${sectionHead({ eyebrow: 'HVAC is all we do', h: 'Heating, cooling and indoor air. Nothing else.' })}
-        <p>Air Climate Heating & Cooling handles heating, ventilation and air conditioning for homeowners, businesses and builders across the Stockton area. We don’t do plumbing, electrical or refrigeration — keeping our focus narrow is how we stay good at what we do.</p>
+        ${sectionHead({ eyebrow: 'What we do', h: 'Heating, cooling and indoor air quality' })}
+        <p>Air Climate Heating & Cooling handles heating, ventilation and air conditioning for homeowners, businesses and builders in Stockton and nearby towns. From a quick repair to a full system for a new build, our team handles the whole job.</p>
         <p>That means repairs on every major brand, new air conditioners, furnaces and heat pumps sized to your home, ductwork and indoor air quality, light commercial rooftop units and HVAC for new construction and remodels.</p>
         <dl class="facts">
           <div><dt>Based in</dt><dd>Stockton, California</dd></div>

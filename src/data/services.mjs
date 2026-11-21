@@ -546,7 +546,6 @@ export const services = [
       { h: 'Maintenance that protects your budget', p: 'Scheduled maintenance on rooftop units — belts, filters, coils and controls — prevents most emergency calls and keeps equipment running longer. We’ll build a schedule around your building and your budget.' },
     ],
     faqs: [
-      { q: 'Do you do commercial refrigeration?', a: 'No. We’re strictly a heating, ventilation and air conditioning company — we don’t service walk-ins, reach-ins or ice machines.' },
       { q: 'Can you work after business hours?', a: 'Ask us — we schedule commercial work around your operating hours whenever possible.' },
     ],
     related: ['new-construction', 'ductless-mini-splits', 'ductwork', 'thermostats'],
