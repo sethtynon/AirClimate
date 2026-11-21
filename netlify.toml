@@ -1,0 +1,23 @@
+# Netlify settings (these override the build settings typed in the Netlify dashboard).
+[build]
+  command = "node build.mjs"
+  publish = "dist"
+
+# Security headers on every page.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+
+# Cache CSS / JS / images for a day (they change rarely).
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# www -> main domain and http -> https are handled by Netlify automatically
+# (primary domain + Force HTTPS), so no redirect rules are needed here.

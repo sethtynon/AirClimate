@@ -49,7 +49,7 @@ Add `?utm_source=facebook&utm_campaign=...` to ad links — UTM and `fbclid`/`gc
 
 ## Before launch
 
-1. `siteUrl` in `src/data/business.mjs` → the real domain (used in canonical tags + sitemap).
+1. ~~`siteUrl`~~ set to https://callairclimate.com. Make it the primary domain in Netlify.
 2. `formEndpoint` → your form handler / CRM webhook. Until then, forms just redirect to `/thank-you/`.
 3. Replace the stand-in Unsplash photos in `src/data/photos.mjs` with real photos of your team, trucks and installs.
 4. Add real Google reviews to `reviews` in `business.mjs` (the reviews section stays hidden until you do).

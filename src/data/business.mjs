@@ -1,5 +1,5 @@
 // Core business facts. Everything that appears site-wide comes from here.
-// TODO before launch: set siteUrl to the real domain and formEndpoint to your form handler.
+// TODO before launch: set formEndpoint to your form handler.
 export const business = {
   name: 'Air Climate Heating & Cooling',
   shortName: 'Air Climate',
@@ -15,7 +15,7 @@ export const business = {
   address: { street: '5922 Mitchler Ave', city: 'Stockton', region: 'CA', zip: '95207' },
   addressLine: '5922 Mitchler Ave, Stockton, CA 95207',
   geo: { lat: 37.9577, lng: -121.2908 }, // Stockton city center
-  siteUrl: 'https://www.example.com', // TODO: replace with the live domain (used for canonical URLs + sitemap)
+  siteUrl: 'https://callairclimate.com', // live domain (used for canonical URLs + sitemap). Must match the primary domain in Netlify.
   formEndpoint: '', // TODO: e.g. a Formspree / Netlify / CRM webhook URL. Empty = demo mode (redirects to thank-you page).
   email: '', // optional; leave blank to hide
   social: { facebook: '', instagram: '', google: '', yelp: '' }, // fill in when profiles exist
