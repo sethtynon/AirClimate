@@ -65,5 +65,5 @@ conversion once per real submission.
 3. Replace the stand-in Unsplash photos in `src/data/photos.mjs` with real photos of your team, trucks and installs.
 4. Add real Google reviews to `reviews` in `business.mjs` (the reviews section stays hidden until you do).
 5. Confirm the three `specials` cards, Comfort Plan details/pricing, and whether you offer after-hours service and financing.
-6. Once your Google Business Profile is live, set `mapQuery` to your business name so the map shows your listing (it currently pins 5922 Mitchler Ave).
+6. Keep `mapQuery` as the street address. A business-name search makes Google show other businesses on the map.
 7. Submit `sitemap.xml` in Google Search Console.
