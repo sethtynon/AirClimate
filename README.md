@@ -47,10 +47,21 @@ Not linked from the site, `noindex`, and excluded from `sitemap.xml`. Each one a
 
 Add `?utm_source=facebook&utm_campaign=...` to ad links — UTM and `fbclid`/`gclid` values are saved with every lead.
 
+## Leads
+
+Every form posts to Netlify Forms (no extra service). Form names in the Netlify dashboard:
+`booking` (contact page), `service-request` (service + city pages), `comfort-plan`, and `lp-<slug>` for each landing page.
+The notification email subject reads like `New lead: AC repair – Maria (95207)`. Each lead includes every quiz answer, ZIP, page and UTM/fbclid.
+
+## Ad tracking
+
+Paste IDs into `tracking` in `src/data/business.mjs` (Meta Pixel, GA4, Google Ads). The thank-you page fires a `Lead`
+conversion once per real submission.
+
 ## Before launch
 
 1. ~~`siteUrl`~~ set to https://callairclimate.com. Make it the primary domain in Netlify.
-2. `formEndpoint` → your form handler / CRM webhook. Until then, forms just redirect to `/thank-you/`.
+2. ~~Form handler~~ done: leads go to **Netlify Forms**. In Netlify: Forms → *Enable form detection*, redeploy, then Site configuration → Notifications → Emails and webhooks → *Form submission notifications* → add the email address that should get leads.
 3. Replace the stand-in Unsplash photos in `src/data/photos.mjs` with real photos of your team, trucks and installs.
 4. Add real Google reviews to `reviews` in `business.mjs` (the reviews section stays hidden until you do).
 5. Confirm the three `specials` cards, Comfort Plan details/pricing, and whether you offer after-hours service and financing.

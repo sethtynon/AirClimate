@@ -521,7 +521,7 @@ ${header('about')}
         <h2>Plan questions</h2>
         ${faqList(faqs)}
       </article>
-      <aside class="side" id="request">${leadForm({ title: 'Ask about the Comfort Plan', interest: 'Tune-up / maintenance' })}</aside>
+      <aside class="side" id="request">${leadForm({ title: 'Ask about the Comfort Plan', interest: 'Comfort Plan', formName: 'comfort-plan' })}</aside>
     </div>
   </section>
 </main>
@@ -630,7 +630,7 @@ ${body('page-lp')}
         <p class="subhero-lead">${esc(lp.sub)}</p>
         <ul class="lp-points">${lp.points.map((x) => `<li>${icon('check', 'ico ico-sm')}${esc(x)}</li>`).join('')}</ul>
       </div>
-      <div class="lp-quiz" id="start">${quiz({ steps: lp.steps, title: lp.quizTitle, interest: lp.interest, company: lp.company })}</div>
+      <div class="lp-quiz" id="start">${quiz({ steps: lp.steps, title: lp.quizTitle, interest: lp.interest, company: lp.company, formName: `lp-${lp.slug}` })}</div>
     </div>
   </section>
   ${wave('navy', 'cream')}

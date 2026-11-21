@@ -1,5 +1,4 @@
 // Core business facts. Everything that appears site-wide comes from here.
-// TODO before launch: set formEndpoint to your form handler.
 export const business = {
   name: 'Air Climate Heating & Cooling',
   shortName: 'Air Climate',
@@ -16,7 +15,16 @@ export const business = {
   addressLine: '5922 Mitchler Ave, Stockton, CA 95207',
   geo: { lat: 37.9577, lng: -121.2908 }, // Stockton city center
   siteUrl: 'https://callairclimate.com', // live domain (used for canonical URLs + sitemap). Must match the primary domain in Netlify.
-  formEndpoint: '', // TODO: e.g. a Formspree / Netlify / CRM webhook URL. Empty = demo mode (redirects to thank-you page).
+  // Leads go to Netlify Forms (Netlify → Forms) and are emailed by Netlify's form notifications.
+  // Only set this if you later want leads POSTed somewhere else instead (e.g. a CRM webhook).
+  formEndpoint: '',
+  // Ad tracking. Paste IDs here to turn them on; the thank-you page fires a 'Lead' conversion.
+  tracking: {
+    metaPixelId: '', // Facebook / Meta Pixel ID (numbers only)
+    ga4Id: '', // Google Analytics 4, e.g. 'G-XXXXXXX'
+    googleAdsId: '', // Google Ads, e.g. 'AW-123456789'
+    googleAdsLeadLabel: '', // Google Ads conversion label for leads
+  },
   email: '', // optional; leave blank to hide
   social: { facebook: '', instagram: '', google: '', yelp: '' }, // fill in when profiles exist
   // Google map shown in the service-area section. Once your Google Business Profile is live,

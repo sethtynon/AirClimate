@@ -40,7 +40,19 @@ ${noindex ? '<meta name="robots" content="noindex, nofollow">' : `<link rel="can
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Rubik:wght@600;700;800&family=Yellowtail&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css">
 ${ld}
+${trackingTags()}
 </head>`;
+}
+
+// Meta Pixel + Google Analytics — only output when IDs are set in business.mjs.
+function trackingTags() {
+  const t = B.tracking || {};
+  let out = '';
+  if (t.ga4Id) out += `<script async src="https://www.googletagmanager.com/gtag/js?id=${esc(t.ga4Id)}"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${esc(t.ga4Id)}');</script>`;
+  if (t.googleAdsId) out += `<script>window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){dataLayer.push(arguments);};gtag('config','${esc(t.googleAdsId)}');</script>${t.ga4Id ? '' : `<script async src="https://www.googletagmanager.com/gtag/js?id=${esc(t.googleAdsId)}"></script>`}`;
+  if (t.metaPixelId) out += `<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','${esc(t.metaPixelId)}');fbq('track','PageView');</script>`;
+  if (t.googleAdsId && t.googleAdsLeadLabel) out += `<meta name="ads-lead" content="${esc(t.googleAdsId)}/${esc(t.googleAdsLeadLabel)}">`;
+  return out;
 }
 
 // ───────────── HEADER (static — scrolls away with the page) ─────────────
@@ -136,14 +148,20 @@ export function ctaBand({ h = 'Honest comfort for your heating & air', p = `Call
 </section>`;
 }
 
+// Netlify Forms: each form name is registered at deploy time from the HTML below.
+// Submissions show up in Netlify → Forms and are emailed via Netlify's form notifications.
+const netlifyAttrs = (name) => `name="${name}" action="/thank-you/" method="post" data-netlify="true" netlify-honeypot="company_website"${B.formEndpoint ? ` data-endpoint="${esc(B.formEndpoint)}"` : ''}`;
+const netlifyHidden = (name) => `<input type="hidden" name="form-name" value="${name}"><input type="hidden" name="subject" value="New website lead" data-subject>`;
+
 // ───────────── LEAD FORM (simple) ─────────────
 let formCount = 0;
-export function leadForm({ title = 'Request service', interest = '', cityName = '', note = '' } = {}) {
+export function leadForm({ title = 'Request service', interest = '', cityName = '', note = '', formName = 'service-request' } = {}) {
   const id = `lf${++formCount}`;
   const opts = ['AC repair', 'Heating repair', 'New system estimate', 'Heat pump estimate', 'Tune-up / maintenance', 'Ductwork or air quality', 'Commercial HVAC', 'New construction bid', 'Something else'];
   if (interest && !opts.includes(interest)) opts.unshift(interest);
   return `
-<form class="lead-form" action="${esc(B.formEndpoint)}" method="post" data-lead-form novalidate>
+<form class="lead-form" ${netlifyAttrs(formName)} data-lead-form novalidate>
+  ${netlifyHidden(formName)}
   <p class="form-title">${esc(title)}</p>
   <p class="form-sub">${note || `We’ll call you back to confirm a time.`}</p>
   <div class="field"><label for="${id}-name">Name</label><input id="${id}-name" name="name" autocomplete="name" required></div>
@@ -168,7 +186,7 @@ export function leadForm({ title = 'Request service', interest = '', cityName = 
 
 // ───────────── QUIZ FUNNEL (multi-step qualifier) ─────────────
 let quizCount = 0;
-export function quiz({ steps, title = 'Get started', interest = '', company = false, sub = 'Takes about 30 seconds.' }) {
+export function quiz({ steps, title = 'Get started', interest = '', company = false, sub = 'Takes about 30 seconds.', formName = 'booking' }) {
   const id = `qz${++quizCount}`;
   const total = steps.length + 2; // + ZIP + contact
   const stepHtml = steps.map((st, i) => `
@@ -179,7 +197,8 @@ export function quiz({ steps, title = 'Get started', interest = '', company = fa
       </div>
     </fieldset>`).join('');
   return `
-<form class="quiz" action="${esc(B.formEndpoint)}" method="post" data-quiz data-total="${total}" novalidate>
+<form class="quiz" ${netlifyAttrs(formName)} data-quiz data-total="${total}" novalidate>
+  ${netlifyHidden(formName)}
   <div class="qz-top">
     <p class="qz-title">${esc(title)}</p>
     <p class="qz-sub">${esc(sub)}</p>

@@ -47,13 +47,21 @@
     if (page) page.value = location.pathname;
     if (utm) utm.value = utmString;
   }
+  function val(form, n) { var el = form.elements[n]; return el && el.value ? String(el.value).trim() : ''; }
   function send(form, btn, label) {
     if (form.company_website && form.company_website.value) return; // spam trap
     btn.disabled = true; btn.textContent = 'Sending…';
-    var endpoint = form.getAttribute('action');
-    if (!endpoint) { location.href = '/thank-you/'; return; } // demo mode until a form endpoint is set
-    fetch(endpoint, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
-      .then(function (r) { if (!r.ok) throw new Error(r.status); location.href = '/thank-you/'; })
+    // Email subject Netlify uses for the notification, e.g. "New lead: AC repair – Maria (95207)"
+    var subj = form.querySelector('[data-subject]');
+    if (subj) subj.value = 'New lead: ' + (val(form, 'interest') || val(form, 'problem') || 'Website request') + ' – ' + val(form, 'name') + (val(form, 'zip') ? ' (' + val(form, 'zip') + ')' : '');
+    var done = function () { try { sessionStorage.setItem('ac_lead', val(form, 'form-name') || '1'); } catch (e) {} location.href = '/thank-you/'; };
+    var local = /^(localhost|127.0.0.1)$/.test(location.hostname);
+    var custom = form.getAttribute('data-endpoint');
+    if (local && !custom) { done(); return; } // local preview: no form backend, just show the thank-you page
+    var req = custom
+      ? fetch(custom, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+      : fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(form)).toString() });
+    req.then(function (r) { if (!r.ok) throw new Error(r.status); done(); })
       .catch(function () {
         btn.disabled = false; btn.textContent = label;
         var err = form.querySelector('.form-error');
@@ -138,4 +146,18 @@
     });
     show(0, false);
   });
+
+  // ── Conversion tracking: fire "Lead" once, on the thank-you page right after a real submission ──
+  if (location.pathname === '/thank-you/') {
+    var lead = null;
+    try { lead = sessionStorage.getItem('ac_lead'); sessionStorage.removeItem('ac_lead'); } catch (e) {}
+    if (lead) {
+      if (window.fbq) fbq('track', 'Lead', { content_name: lead });
+      if (window.gtag) {
+        gtag('event', 'generate_lead', { form_name: lead });
+        var ads = document.querySelector('meta[name="ads-lead"]');
+        if (ads) gtag('event', 'conversion', { send_to: ads.content });
+      }
+    }
+  }
 })();
